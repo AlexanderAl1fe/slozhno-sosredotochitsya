@@ -10,3 +10,17 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+.only-dark-rec {
+  position: absolute;
+  align-self: start;
+  justify-self: end;
+  padding-block-start: 20px;
+  padding-inline-end: 48px;
+  color: var(--accent-color);
+  text-align: center;
+  font-family: 'IBM Plex Mono';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
+}

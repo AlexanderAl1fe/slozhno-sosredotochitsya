@@ -1,5 +1,55 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--bg-color)
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: start;
+  justify-items: end;
+  min-block-size: 648px;
+  min-inline-size: 375px;
+  padding: 20px;
+  block-size: 100vh;
+  background-image: url(/images/cover-image-dark.png);
+}
+
+.header__theme-menu {
+  justify-self: center;
+}
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  background: none;
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+}
+
+.header__theme-menu-button {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  line-height: 18px;
+}
+
+.header__title {
+  position: relative;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0px #FF0070;
+  font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
+  justify-self: start;
+  right: 20px;
 }
