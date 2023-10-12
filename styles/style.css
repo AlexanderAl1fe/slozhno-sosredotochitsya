@@ -1,7 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 .header {
@@ -14,9 +15,12 @@
   justify-items: end;
   min-block-size: 648px;
   min-inline-size: 375px;
+  max-inline-size: 100%;
   padding: 20px;
   block-size: 100vh;
   background-image: url(/images/cover-image-dark.png);
+  background-size: cover;
+  background-position: 50%;
 }
 
 .header__theme-menu {
@@ -30,8 +34,8 @@
 
 .header__theme-menu-item {
   background: none;
-  padding-inline-start: 13px;
-  padding-inline-end: 13px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
 }
 
 .header__theme-menu-button {
@@ -44,12 +48,80 @@
 .header__title {
   position: relative;
   color: #DB00FF;
-  text-shadow: 4px 4px 0px #FF0070;
-  font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-family: var(--font-family);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 129.525px */
   justify-self: start;
   right: 20px;
+  padding-top: 58px;
+}
+
+.header__description {
+  justify-self: end;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  margin-block-start: 58px;
+  padding-inline-end: 4px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: #000028;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.main {
+  padding: 60px 20px;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: max-content 1fr;
+}
+
+.section-title {
+  color: var(--accent-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-style: var(--font-style);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  min-width: 315px;
+}
+
+.section-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.article-title {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-style: var(--font-style);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+}
+
+.article-description {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-style: var(--font-style);
+  font-weight: 400;
+  line-height: var(--line-height);
 }

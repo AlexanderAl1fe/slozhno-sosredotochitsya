@@ -5,5 +5,10 @@
 :root {
   --accent-color: #FF0070;
   --maintext-color: #F1B2CE;
-  --bg-color: rgba(0, 0, 40, 1)
+  --bg-color: rgba(0, 0, 40, 1);
+  --font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
+  --font-size: 18px;
+  --font-style: normal;
+  --font-weight: 700;
+  --line-height: 23.4px;
 } 
