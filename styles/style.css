@@ -83,10 +83,10 @@
   padding: 60px 20px;
 }
 
-.section {
+.procrastinate-section {
   display: grid;
   gap: 20px;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns
 }
 
 .section-title {
@@ -99,17 +99,12 @@
   min-width: 315px;
 }
 
-.section-description {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .article {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .article-title {
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -124,4 +119,16 @@
   font-style: var(--font-style);
   font-weight: 400;
   line-height: var(--line-height);
+}
+
+.concentration-section {
+  display: grid;
+  gap: 20px;
+  grid-template-rows: max-content 1fr;
+}
+
+.concentration-section-description {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
