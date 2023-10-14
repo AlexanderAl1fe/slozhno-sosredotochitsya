@@ -2,6 +2,7 @@
 
 .page {
   background-color: var(--bg-color);
+  background-image: url(/images/cover-image-dark.png);
   background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -15,10 +16,9 @@
   justify-items: end;
   min-block-size: 648px;
   min-inline-size: 375px;
-  max-inline-size: 100%;
+  inline-size: 100%;
   padding: 20px;
   block-size: 100vh;
-  background-image: url(/images/cover-image-dark.png);
   background-size: cover;
   background-position: 50%;
 }
@@ -158,30 +158,120 @@
 .gallary-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: max-content 1fr 1fr 1fr;
   gap: 20px;
+  grid-template-areas: 
+    "gallary-title gallary-title gallary-title"
+    "sunset-picture sunset-picture ice-cream-picture"
+    "tape-picture books-picture ice-cream-picture"
+    "tape-picture street-picture street-picture";
 }
 
 .gallary-title {
-  grid-column: 1/4;
+  grid-area: gallary-title;
 }
 
 .sunset-picture {
-  grid-column: 1/3;
-  grid-row: 2/4;
-  min-inline-size: 355px;
-  max-inline-size: 649px;
-  min-block-size: 142px;
-  max-block-size: 260px;
+  grid-area: sunset-picture;
+ 
 }
 
 .sunset-img {
+  display: block;
   object-fit: cover;
   inline-size: 100%;
   block-size: 100%;
 }
 
 .ice-cream-picture {
-  grid-column: 2/3;
-  grid-row: 2/5;
+  grid-area: ice-cream-picture;  
+}
+
+.ice-cream-img {
+  display: block;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.tape-picture {
+  grid-area: tape-picture;  
+}
+
+.tape-img {
+  display: block;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.books-picture {
+  grid-area: books-picture;
+}
+
+.books-img {
+  display: block;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.street-picture {
+  grid-area: street-picture;
+}
+
+.street-img {
+  display: block;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.footer {
+  position: relative;
+  padding: 20px;
+  min-block-size: 648px;
+  min-inline-size: 375px;
+  inline-size: 100%;
+  block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title {
+  color: #DB00FF;
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: var(--font-family);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
+  
+}
+
+.text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.corner::before {
+  content: '';
+  position: absolute;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  min-inline-size: 25px;
+  min-block-size: 25px;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+}
+
+.corner::after {
+  content: '';
+  position: absolute;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  min-inline-size: 25px;
+  min-block-size: 25px;
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
 }
