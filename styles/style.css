@@ -4,8 +4,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: url(/images/cover-image-dark.png);
   background-attachment: fixed;
-  background-size: auto;
+  background-size: cover;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 .header {
@@ -40,6 +41,18 @@
   line-height: 25px; /* 138.889% */
 }
 
+.only-dark-rec::after {
+  position: absolute;
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px 3px var(--accent-color);
+  inset-inline-end: 30px;
+  inset-block-start: 30px;
+}
+
 .header__theme-menu {
   justify-self: center;
 }
@@ -58,6 +71,20 @@
   background: none;
   border: none;
   line-height: 18px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid;
 }
 
 .header__theme-menu-button_active {
@@ -85,7 +112,10 @@
   line-height: 23.4px; /* 130% */
   margin-block-start: 58px;
   padding-inline-end: 4px;
+  width: 50%;
 }
+
+
 
 .main {
   padding: 60px 20px;
@@ -97,7 +127,7 @@
 .procrastinate-section {
   display: grid;
   gap: 20px;
-  grid-template-columns: 315px 1fr;
+  grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
@@ -107,6 +137,8 @@
   font-style: var(--font-style);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
+  inline-size: 315px;
+
 }
 
 .article {
@@ -143,14 +175,13 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.article-title-move-ontop {
+.section-title-move-ontop {
   grid-column: 1/4;
-  inline-size: 315px;
 }
 
 .howto-section {
   display: grid;
-  grid-template-columns: 315px 1fr;
+  grid-template-columns: max-content 1fr;
   grid-template-rows: repeat(6, max-content);
   gap: 20px;
 }
@@ -227,7 +258,21 @@
 }
 
 .text-link {
+  display: inline-block;
   text-decoration: none;
+}
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.text-link:focus {
+  outline: none;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid;
+  outline-offset: -7px;
 }
 
 .corner::before {
@@ -247,3 +292,117 @@
   inset-inline-end: 20px;
   inset-block-start: 20px;
 }
+
+@media (max-width: 768px) {
+  .header__theme-menu {
+    position: relative;
+    justify-self: end;
+    align-self: self-end;
+    top: -58px;
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+  .header__title {
+    top: 60px;
+  }
+
+  .header__description {
+    margin-block-start: 50px;
+    width: 364px;
+    height: 117px;
+  }
+  
+  .section-title {
+    inline-size: 236px;
+  }
+
+  .concentration-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding: 10px;
+    justify-content: end;
+  }
+  
+  .only-dark-rec {
+    padding-block-start: 10px; 
+    padding-inline-end: 38px;  
+  }
+
+  .corner::before {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
+
+  .corner::after {
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+  }
+  
+  .only-dark-rec::after {
+    inset-inline-end: 19px;
+    inset-block-start: 18px;
+  }
+
+  button {
+    padding: 1px 12px 5px;
+  }
+
+  .header__theme-menu {
+    position: static;
+    padding-block-end: 8px;
+    padding-inline-end: ;
+    
+  }
+
+  .header__title {
+    position: static;
+    padding-block-end: 57px;
+    font-size: 116px;
+  }
+
+  .header__description {
+    inline-size: 355px;
+    margin-block-start: -2px;
+  }
+
+  .main {
+    padding: 40px 10px;
+    gap: 50px;
+  }
+
+  .procrastinate-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-title {
+    inline-size: 354px;
+  }
+  
+  .howto-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallary-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-title {
+    font-size: 116px;
+    margin-block-start: 3px;
+  }
+}
+  

@@ -5,6 +5,7 @@
   --bg-color: #FFF1F7;
   --titletext-color: #FFC2E6;
   --accenttitle-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.40);
   background-image: url(/images/cover-image-light.png);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -23,6 +24,7 @@
     --bg-color: #FFF1F7;
     --titletext-color: #FFC2E6;
     --accenttitle-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.40);
   }
 }
  
