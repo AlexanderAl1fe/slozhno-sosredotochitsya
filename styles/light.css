@@ -1,12 +1,28 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 
 .page.theme_light {
+  --accent-color: #FF8DCB;
+  --maintext-color: #353430;
+  --bg-color: #FFF1F7;
+  --titletext-color: #FFC2E6;
+  --accenttitle-color: #353430;
+  background-image: url(/images/cover-image-light.png);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.theme_light .only-dark-rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --maintext-color: #353430;
+    --bg-color: #FFF1F7;
+    --titletext-color: #FFC2E6;
+    --accenttitle-color: #353430;
+  }
+}
+ 

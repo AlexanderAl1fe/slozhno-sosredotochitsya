@@ -1,10 +1,19 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root.theme_dark {
+  --accent-color: #FF0070;
+  --maintext-color: #F1B2CE;
+  --bg-color: rgba(0, 0, 40, 1);
+  --titletext-color: #DB00FF;
+  --accenttitle-color: #FF0070;
+  --font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
+  --font-size: 18px;
+  --font-style: normal;
+  --font-weight: 700;
+  --line-height: 23.4px;
+}
 
 .page.theme_dark {
+  background-color: var(--bg-color);
+  background-image: url(/images/cover-image-dark.png);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -23,4 +32,61 @@
   font-style: normal;
   font-weight: 400;
   line-height: 25px; /* 138.889% */
+}
+
+.only-dark-rec::after {
+  position: absolute;
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px 3px var(--accent-color);
+  inset-inline-end: 30px;
+  inset-block-start: 30px;
+}
+
+.header__theme-menu-button {
+  color: var(--accenttitle-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accenttitle-color);
+}
+
+.header__title {
+  color: var(--titletext-color);
+  text-shadow: 4px 4px 0px #FF0070;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: #000028;
+}
+
+.section-title {
+  color: var(--accenttitle-color);
+}
+
+.article-description {
+  color: var(--maintext-color);
+}
+
+.footer-title {
+  color: var(--titletext-color);
+  text-shadow: 2px 2px 0px #FF0070;
+}
+
+.text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.corner::before {
+  border-block-end: 1px solid var(--accenttitle-color);
+  border-inline-start: 1px solid var(--accenttitle-color);
+}
+
+.corner::after {
+  border-block-start: 1px solid var(--accenttitle-color);
+  border-inline-end: 1px solid var(--accenttitle-color);
 }
