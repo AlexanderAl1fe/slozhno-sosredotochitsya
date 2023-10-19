@@ -4,6 +4,7 @@
   --bg-color: rgba(0, 0, 40, 1);
   --titletext-color: #DB00FF;
   --accenttitle-color: #FF0070;
+  --bigtext-shadow-title:#FF0070;
   --hover-color: rgba(255, 0, 112, 0.40);
   --font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
   --font-size: 18px;
@@ -14,7 +15,7 @@
 
 .page.theme_dark {
   background-color: var(--bg-color);
-  background-image: url(/images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -39,12 +40,12 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accenttitle-color);
+  outline: 1px solid var(--accenttitle-color);
 }
 
 .header__title {
   color: var(--titletext-color);
-  text-shadow: 4px 4px 0px #FF0070;
+  text-shadow: 4px 4px 0px var(--bigtext-shadow-title);
 }
 
 .title-decor {
@@ -62,7 +63,7 @@
 
 .footer-title {
   color: var(--titletext-color);
-  text-shadow: 2px 2px 0px #FF0070;
+  text-shadow: 2px 2px 0px var(--bigtext-shadow-title);
 }
 
 .text-link {
@@ -77,4 +78,14 @@
 .corner::after {
   border-block-start: 1px solid var(--accenttitle-color);
   border-inline-end: 1px solid var(--accenttitle-color);
+}
+
+@media (max-width: 768px) {
+  .header__title {
+    text-shadow: 4px 4px 0px var(--accent-color);
+  }
+
+  .footer-title {
+    text-shadow: 2px 2px 0px var(--accent-color);
+  }
 }
