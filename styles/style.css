@@ -300,10 +300,9 @@
 
 @media (max-width: 768px) {
   .header__theme-menu {
-    position: relative;
     justify-self: end;
     align-self: self-end;
-    top: -58px;
+    margin-block-end: 58px;
   }
   .header__theme-menu-list {
     flex-direction: column;
@@ -318,16 +317,71 @@
     height: 117px;
   }
   
+  .procrastinate-section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: minmax(50px,236px) 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
   .section-title {
-    inline-size: 236px;
+    inline-size: 100%;
   }
 
   .concentration-section {
     display: flex;
     flex-direction: column;
   }
+
+  .section-title-move-ontop {
+    inline-size: 236px;
+  }
+
+  .howto-section {
+    display: grid;
+    grid-template-columns: minmax(50px, 236px) 1fr;
+    grid-template-rows: repeat(6, max-content);
+    gap: 20px;
+  }
 }
 
+@media (max-width: 615px) {
+  .header {
+    padding: 10px;
+  }
+ 
+  .header__title {
+    top: 0px;
+    right: 10px;
+  }
+  
+  .header__theme-menu {
+    margin-block-end: 0px;
+  }
+
+  .header__description {
+    inline-size: 324px;
+  }
+
+  .only-dark-rec {
+    padding-block-start: 10px; 
+    padding-inline-end: 38px;  
+  }
+
+  .corner::before {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
+
+  .corner::after {
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+  }
+  
+  .only-dark-rec::after {
+    inset-inline-end: 19px;
+    inset-block-start: 18px;
+  }
+}
 @media (max-width: 375px) {
   .header {
     padding: 10px;
