@@ -5,6 +5,7 @@
   --titletext-color: #DB00FF;
   --accenttitle-color: #FF0070;
   --bigtext-shadow-title:#FF0070;
+  --hover-color: rgba(255, 0, 112, 0.40);
 }
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
@@ -80,8 +81,7 @@
 }
 
 .header__theme-menu-button:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  border: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -267,8 +267,7 @@
   text-decoration: none;
 }
 .text-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  border-bottom: 1px solid;
 }
 
 .text-link:focus {
@@ -277,7 +276,6 @@
 
 .text-link:focus-visible {
   outline: 1px solid;
-  outline-offset: -7px;
 }
 
 .corner::before {
@@ -359,7 +357,7 @@
   }
 
   .header__description {
-    inline-size: 324px;
+    inline-size: 34px;
   }
 
   .only-dark-rec {
@@ -407,11 +405,7 @@
     inset-inline-end: 19px;
     inset-block-start: 18px;
   }
-
-  button {
-    padding: 1px 12px 5px;
-  }
-
+  
   .header__theme-menu {
     position: static;
     padding-block-end: 8px;

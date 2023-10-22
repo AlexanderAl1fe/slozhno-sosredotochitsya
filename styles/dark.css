@@ -1,5 +1,5 @@
 :root.theme_dark {
-  --accent-color: #FF0070;
+  --accent-color: #FF0070;                                               /* Любовь доброго времени суток! одно из замечаний было по поводу цветов в темной теме, я все проверил и сравнил, все хеш-номера цветов совпадают, может я как то не правильно смотрю, но ей богу не могу найти разницу*/
   --maintext-color: #F1B2CE;
   --bg-color: rgba(0, 0, 40, 1);
   --titletext-color: #DB00FF;
@@ -36,7 +36,7 @@
 }
 
 .header__theme-menu-button :hover {
-  outline: 1px solid var(--hover-color);
+  border: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button_active {
