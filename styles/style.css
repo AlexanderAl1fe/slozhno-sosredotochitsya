@@ -10,7 +10,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-attachment: fixed;
   background-size: cover;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -357,7 +357,7 @@
   }
 
   .header__description {
-    inline-size: 34px;
+    inline-size: 324px;
   }
 
   .only-dark-rec {

@@ -8,6 +8,9 @@
   --bg-color: rgba(0, 0, 40, 1);
   --titletext-color: #DB00FF;
   --accenttitle-color: #FF0070;
+  --bigtext-shadow-title:#FF0070;
+  --hover-color: rgba(255, 0, 112, 0.40);
+  --bg-image: url(../images/cover-image-dark.png);
   --font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
   --font-size: 18px;
   --font-style: normal;
