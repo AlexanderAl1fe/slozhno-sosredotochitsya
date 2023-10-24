@@ -30,4 +30,9 @@
     --hover-color: rgba(50, 49, 45, 0.40);
     --bg-image: url(../images/cover-image-light.png);
   }
+
+  
+  .page.theme_auto .only-dark-rec {
+    display: none;
+  }
 }
